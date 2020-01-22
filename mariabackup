@@ -5,6 +5,6 @@ MARIABACKUP=$(which mariabackup)
 USER=oneadmin
 DB=opennebula
 NOW=$(date '+%M%H%d')
-FILE=mbackup-$NOW.sql.gz
-BDIR=/backup/hourly/
-$MARIABACKUP --backup --databases=$DB --target-dir=$BDIR --user=$USER --stream=xbstream | $GZIP > $FILE
+FILE=mbackup-$NOW.gz
+BDIR=/backup/hourly
+$MARIABACKUP --backup --databases=$DB --user=$USER --stream=xbstream | $GZIP > $BDIR/$FILE

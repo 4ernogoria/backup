@@ -1,5 +1,5 @@
 #!/bin/sh
 NOW=$(date '+%M%H%d')
-BDIR=/backup/hourly/
+BDIR=/backup/hourly
 touch "$BDIR"/test-horly-"$NOW"
 
